@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+            xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            x:Class="Cp.UpdatePage"
+            xmlns:local="clr-namespace:Cp.Controls"
+            xmlns:topbottom="clr-namespace:Cp.Menu;assembly=Cp" 
+            BackgroundColor="White">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="betlog">#3ec3d5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="MasterStack" >
+
+                <StackLayout x:Name="TopStack">
+                    <topbottom:TopMenu />
+                </StackLayout>
+
+
+                <StackLayout x:Name="MiddleStack">
+                    
+                    <StackLayout Padding="40" Spacing="10">
+                <Label HorizontalOptions="CenterAndExpand" 
+                              Text="Profile Update:)" 
+                              TextColor="White" 
+                              FontSize="40" />
+                <Entry Style="{StaticResource buttonStyle}"
+                        x:Name="Ename"
+                        Placeholder="Name" 
+                        HorizontalOptions="FillAndExpand"/>
+                <Entry Style="{StaticResource buttonStyle}" 
+                        x:Name="Elastname" 
+                        Placeholder="LastName" 
+                        HorizontalOptions="FillAndExpand"/>
+                <Entry Style="{StaticResource buttonStyle}"
+                        x:Name="Eemail" 
+                        Placeholder="Email" 
+                        HorizontalOptions="FillAndExpand"
+                        Keyboard="Email" />
+                <Entry Style="{StaticResource buttonStyle}"
+                        x:Name="Epassword" 
+                        Placeholder="Password"
+                        IsPassword="true"          
+                        HorizontalOptions="FillAndExpand"/>
+
+                <Picker TextColor="White"
+                        SelectedIndexChanged="Handle_SelectedIndexChanged"
+                        x:Name="CountryPicker2"
+                        Title="Country"
+                        HorizontalOptions="FillAndExpand">
+
+                    <Picker.ItemsSource TextColor="{StaticResource betlog}">
+                        <x:Array Type= "{x:Type x:String}">
+                            <x:String>Select Country</x:String>
+                            <x:String>Afghanistan</x:String>
+                            <x:String>Albania</x:String>
+                            <x:String>Algeria</x:String>
+                            <x:String>American Samoa</x:String>
+                            <x:String>Andorra</x:String>
+                            <x:String>Angola</x:String>
+                            <x:String>Anguilla</x:String>
+                            <x:String>Antarctica</x:String>
+                            <x:String>Antigua and Barbuda</x:String>
+                            <x:String>Argentina</x:String>
+                            <x:String>Armenia</x:String>
+                            <x:String>Aruba</x:String>
+                            <x:String>Australia</x:String>
+                            <x:String>Austria</x:String>
+                            <x:String>Azerbaijan</x:String>
+                            <x:String>Bahamas</x:String>
+                            <x:String>Bahrain</x:String>
+                            <x:String>Bangladesh</x:String>
+                            <x:String>Barbados</x:String>
+                            <x:String>Belarus</x:String>
+                            <x:String>Belgium</x:String>
+                            <x:String>Belize</x:String>
+                            <x:String>Benin</x:String>
+                            <x:String>Bermuda</x:String>
+                            <x:String>Bhutan</x:String>
+                            <x:String>Bolivia</x:String>
+                            <x:String>Bosnia and Herzegovina</x:String>
+                            <x:String>Botswana</x:String>
+                            <x:String>Brazil</x:String>
+                            <x:String>British Indian Ocean Territory</x:String>
+                            <x:String>British Virgin Islands</x:String>
+                            <x:String>Brunei</x:String>
+                            <x:String>Bulgaria</x:String>
+                            <x:String>Burkina Faso</x:String>
+                            <x:String>Burundi</x:String>
+                            <x:String>Cambodia</x:String>
+                            <x:String>Cameroon</x:String>
+                            <x:String>Canada</x:String>
+                            <x:String>Cape Verde</x:String>
+                            <x:String>Cayman Islands</x:String>
+                            <x:String>Central African Republic</x:String>
+                            <x:String>Chad</x:String>
+                            <x:String>Chile</x:String>
+                            <x:String>China</x:String>
+                            <x:String>Christmas Island</x:String>
+                            <x:String>Cocos Islands</x:String>
+                            <x:String>Colombia</x:String>
+                            <x:String>Comoros</x:String>
+                            <x:String>Cook Islands</x:String>
+                            <x:String>Costa Rica</x:String>
+                            <x:String>Croatia</x:String>
+                            <x:String>Cuba</x:String>
+                            <x:String>Curacao</x:String>
+                            <x:String>Cyprus</x:String>
+                            <x:String>Czech Republic</x:String>
+                            <x:String>Democratic Republic of the Congo</x:String>
+                            <x:String>Denmark</x:String>
+                            <x:String>Djibouti</x:String>
+                            <x:String>Dominica</x:String>
+                            <x:String>Dominican Republic</x:String>
+                            <x:String>East Timor</x:String>
+                            <x:String>Ecuador</x:String>
+                            <x:String>Egypt</x:String>
+                            <x:String>El Salvador</x:String>
+                            <x:String>Equatorial Guinea</x:String>
+                            <x:String>Eritrea</x:String>
+                            <x:String>Estonia</x:String>
+                            <x:String>Ethiopia</x:String>
+                            <x:String>Falkland Islands</x:String>
+                            <x:String>Faroe Islands</x:String>
+                            <x:String>Fiji</x:String>
+                            <x:String>Finland</x:String>
+                            <x:String>France</x:String>
+                            <x:String>French Polynesia</x:String>
+                            <x:String>Gabon</x:String>
+                            <x:String>Gambia</x:String>
+                            <x:String>Georgia</x:String>
+                            <x:String>Germany</x:String>
+                            <x:String>Ghana</x:String>
+                            <x:String>Gibraltar</x:String>
+                            <x:String>Greece</x:String>
+                            <x:String>Greenland</x:String>
+                            <x:String>Grenada</x:String>
+                            <x:String>Guam</x:String>
+                            <x:String>Guatemala</x:String>
+                            <x:String>Guernsey</x:String>
+                            <x:String>Guinea</x:String>
+                            <x:String>Guinea-Bissau</x:String>
+                            <x:String>Guyana</x:String>
+                            <x:String>Haiti</x:String>
+                            <x:String>Honduras</x:String>
+                            <x:String>Hong Kong</x:String>
+                            <x:String>Hungary</x:String>
+                            <x:String>Iceland</x:String>
+                            <x:String>India</x:String>
+                            <x:String>Indonesia</x:String>
+                            <x:String>Iran</x:String>
+                            <x:String>Iraq</x:String>
+                            <x:String>Ireland</x:String>
+                            <x:String>Isle of Man</x:String>
+                            <x:String>Israel</x:String>
+                            <x:String>Italy</x:String>
+                            <x:String>Ivory Coast</x:String>
+                            <x:String>Jamaica</x:String>
+                            <x:String>Japan</x:String>
+                            <x:String>Jersey</x:String>
+                            <x:String>Jordan</x:String>
+                            <x:String>Kazakhstan</x:String>
+                            <x:String>Kenya</x:String>
+                            <x:String>Kiribati</x:String>
+                            <x:String>Kosovo</x:String>
+                            <x:String>Kuwait</x:String>
+                            <x:String>Kyrgyzstan</x:String>
+                            <x:String>Laos</x:String>
+                            <x:String>Latvia</x:String>
+                            <x:String>Lebanon</x:String>
+                            <x:String>Lesotho</x:String>
+                            <x:String>Liberia</x:String>
+                            <x:String>Libya</x:String>
+                            <x:String>Liechtenstein</x:String>
+                            <x:String>Lithuania</x:String>
+                            <x:String>Luxembourg</x:String>
+                            <x:String>Macau</x:String>
+                            <x:String>Macedonia</x:String>
+                            <x:String>Madagascar</x:String>
+                            <x:String>Malawi</x:String>
+                            <x:String>Malaysia</x:String>
+                            <x:String>Maldives</x:String>
+                            <x:String>Mali</x:String>
+                            <x:String>Malta</x:String>
+                            <x:String>Marshall Islands</x:String>
+                            <x:String>Mauritania</x:String>
+                            <x:String>Mauritius</x:String>
+                            <x:String>Mayotte</x:String>
+                            <x:String>Mexico</x:String>
+                            <x:String>Micronesia</x:String>
+                            <x:String>Moldova</x:String>
+                            <x:String>Monaco</x:String>
+                            <x:String>Mongolia</x:String>
+                            <x:String>Montenegro</x:String>
+                            <x:String>Montserrat</x:String>
+                            <x:String>Morocco</x:String>
+                            <x:String>Mozambique</x:String>
+                            <x:String>Myanmar</x:String>
+                            <x:String>Namibia</x:String>
+                            <x:String>Nauru</x:String>
+                            <x:String>Nepal</x:String>
+                            <x:String>Netherlands</x:String>
+                            <x:String>Netherlands Antilles</x:String>
+                            <x:String>New Caledonia</x:String>
+                            <x:String>New Zealand</x:String>
+                            <x:String>Nicaragua</x:String>
+                            <x:String>Niger</x:String>
+                            <x:String>Nigeria</x:String>
+                            <x:String>Niue</x:String>
+                            <x:String>North Korea</x:String>
+                            <x:String>Northern Mariana Islands</x:String>
+                            <x:String>Norway</x:String>
+                            <x:String>Oman</x:String>
+                            <x:String>Pakistan</x:String>
+                            <x:String>Palau</x:String>
+                            <x:String>Palestine</x:String>
+                            <x:String>Panama</x:String>
+                            <x:String>Papua New Guinea</x:String>
+                            <x:String>Paraguay</x:String>
+                            <x:String>Peru</x:String>
+                            <x:String>Philippines</x:String>
+                            <x:String>Pitcairn</x:String>
+                            <x:String>Poland</x:String>
+                            <x:String>Portugal</x:String>
+                            <x:String>Puerto Rico</x:String>
+                            <x:String>Qatar</x:String>
+                            <x:String>Republic of the Congo</x:String>
+                            <x:String>Reunion</x:String>
+                            <x:String>Romania</x:String>
+                            <x:String>Russia</x:String>
+                            <x:String>Rwanda</x:String>
+                            <x:String>Saint Barthelemy</x:String>
+                            <x:String>Saint Helena</x:String>
+                            <x:String>Saint Kitts and Nevis</x:String>
+                            <x:String>Saint Lucia</x:String>
+                            <x:String>Saint Martin</x:String>
+                            <x:String>Saint Pierre and Miquelon</x:String>
+                            <x:String>Saint Vincent and the Grenadines</x:String>
+                            <x:String>Samoa</x:String>
+                            <x:String>San Marino</x:String>
+                            <x:String>Sao Tome and Principe</x:String>
+                            <x:String>Saudi Arabia</x:String>
+                            <x:String>Senegal</x:String>
+                            <x:String>Serbia</x:String>
+                            <x:String>Seychelles</x:String>
+                            <x:String>Sierra Leone</x:String>
+                            <x:String>Singapore</x:String>
+                            <x:String>Sint Maarten</x:String>
+                            <x:String>Slovakia</x:String>
+                            <x:String>Solomon Islands</x:String>
+                            <x:String>Somalia</x:String>
+                            <x:String>South Africa</x:String>
+                            <x:String>South Korea</x:String>
+                            <x:String>South Sudan</x:String>
+                            <x:String>Spain</x:String>
+                            <x:String>Sri Lanka</x:String>
+                            <x:String>Sudan</x:String>
+                            <x:String>Suriname</x:String>
+                            <x:String>Svalbard and Jan Mayen</x:String>
+                            <x:String>Swaziland</x:String>
+                            <x:String>Sweden</x:String>
+                            <x:String>Switzerland</x:String>
+                            <x:String>Syria</x:String>
+                            <x:String>Taiwan</x:String>
+                            <x:String>Tajikistan</x:String>
+                            <x:String>Tanzania</x:String>
+                            <x:String>Thailand</x:String>
+                            <x:String>Togo</x:String>
+                            <x:String>Tokelau</x:String>
+                            <x:String>Tonga</x:String>
+                            <x:String>Trinidad and Tobago</x:String>
+                            <x:String>Tunisia</x:String>
+                            <x:String>Turkey</x:String>
+                            <x:String>Turkmenistan</x:String>
+                            <x:String>Turks and Caicos Islands</x:String>
+                            <x:String>Tuvalu</x:String>
+                            <x:String>U.S. Virgin Islands</x:String>
+                            <x:String>Uganda</x:String>
+                            <x:String>Ukraine</x:String>
+                            <x:String>United Arab Emirates</x:String>
+                            <x:String>United Kingdom</x:String>
+                            <x:String>United States</x:String>
+                            <x:String>Uruguay</x:String>
+                            <x:String>Uzbekistan</x:String>
+                            <x:String>Vanuatu</x:String>
+                            <x:String>Vatican</x:String>
+                            <x:String>Venezuela</x:String>
+                            <x:String>Vietnam</x:String>
+                            <x:String>Wallis and Futuna</x:String>
+                            <x:String>Western Sahara</x:String>
+                            <x:String>Yemen</x:String>
+                            <x:String>Zambia</x:String>
+                            <x:String>Zimbabwe</x:String>
+                            
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+
+                <Entry
+                        
+                        
+                        
+                        Style="{StaticResource entryStyle}"
+                       
+                        x:Name="mnumber"
+                        Placeholder="Mobile Number"
+                        HorizontalOptions="FillAndExpand"
+                        Keyboard="Telephone"/>
+                
+                <Entry Style="{StaticResource buttonStyle}"
+                        Placeholder="Referral Code" 
+                        HorizontalOptions="FillAndExpand"/>
+                
+                <Button  Text="Update"
+                         Clicked="Updatebtn"
+                         Style="{StaticResource buttonStyle}"
+                         
+                         HorizontalOptions="FillAndExpand"/>
+
+                <Label Text="I have an account" VerticalOptions="EndAndExpand"
+                        HorizontalOptions="Center"
+                        x:Name="lblclick"
+                        Style="{StaticResource buttonStyle}"/>
+
+            </StackLayout>
+
+                </StackLayout>
+
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <topbottom:BottomMenu />
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

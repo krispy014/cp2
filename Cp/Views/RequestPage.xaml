@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:topbottom="clr-namespace:Cp.Menu;assembly=Cp"
+             x:Class="Cp.Views.RequestPage">
+    
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterStack" >
+        
+            <StackLayout x:Name="TopStack">
+                <topbottom:TopMenu />
+            </StackLayout>
+       
+    
+            <StackLayout x:Name="MiddleStack">
+                <Label Text="Request Page" TextColor="Black" FontSize="30" HorizontalTextAlignment="Center" Margin="20"/>
+                <Entry Placeholder="ID SEARCH"  BackgroundColor="#3ec3d5" Margin="20"/>
+                <Entry Placeholder="MOBILE NUMBER" BackgroundColor="#3ec3d5" Margin="20,0,20,0"/>
+                <Button  Style="{StaticResource buttonStyle}" Clicked="Handle_Clicked" Text="Request from Friends" BackgroundColor="#3ec3d5" TextColor="White" Margin="20"/>
+        
+            </StackLayout>
+    
+            <StackLayout VerticalOptions="EndAndExpand">
+                <topbottom:BottomMenu />
+            </StackLayout> 
+
+
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

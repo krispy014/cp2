@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:viewModel="clr-namespace:Cp.Model;assembly=Cp"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:topbottom="clr-namespace:Cp.Menu;assembly=Cp"
+    x:Class="Cp.TradePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterStack" >
+
+            <StackLayout x:Name="TopStack">
+                <topbottom:TopMenu />
+            </StackLayout>
+            <StackLayout x:Name="MiddleStack">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        
+                    </Grid.RowDefinitions>
+
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Row="0" Grid.Column="0" BackgroundColor="white" Grid.ColumnSpan="7" Text=" Trade" HorizontalTextAlignment="Start" FontSize="40" Style="{StaticResource labelStyle}"/>
+                    <Picker Title="Select Coin" Grid.Row="1" Grid.Column="0" BackgroundColor="White" Grid.ColumnSpan="7">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>BTC/USDT</x:String>
+                                <x:String>ETH/USDT</x:String>
+                                <x:String>BCH/USDT</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <StackLayout Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="3"  Grid.RowSpan="8"  BackgroundColor="White">
+                        <!--<StackLayout BackgroundColor="White">
+                            <Button Text="ScrollTest" Command="{Binding ScrollToCommand}"></Button>
+                            <Button Text="Column++" Command="{Binding ChangeColumnCountCommand}"></Button>
+                            <Button Text="Clear" Command="{Binding ClearCommand}"></Button>
+                            <Button Text="Update 1st item text" Command="{Binding UpdateFirstCommand}"></Button>
+                        </StackLayout>-->
+
+                        <flv:FlowListView 
+                            x:Name="flowListView"
+                            FlowColumnCount="{Binding ColumnCount}"
+                            SeparatorVisibility="None"
+                            HasUnevenRows="false"
+                            FlowItemTappedCommand="{Binding ItemTappedCommand}"
+                            FlowLastTappedItem="{Binding LastTappedItem}"
+                            FlowItemsSource="{Binding Items}">
+
+                            <flv:FlowListView.FlowLoadingTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Label
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                TextColor="Black"
+                                Text="Loading...">
+
+                                        </Label>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </flv:FlowListView.FlowLoadingTemplate>
+
+                            <flv:FlowListView.FlowColumnTemplate>
+                                <DataTemplate>
+                                    <Label Font="10" HorizontalOptions="Fill" VerticalOptions="Fill" XAlign="Center" YAlign="Center" Text="{Binding Title}"/>
+                                </DataTemplate>
+                            </flv:FlowListView.FlowColumnTemplate>
+
+                        </flv:FlowListView>
+                    </StackLayout>
+
+
+                    <Button Style="{StaticResource buttonStyle}" Text="Buy" Grid.Row="2" Grid.Column="3"  Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                    <Button Style="{StaticResource buttonStyle}" Text="Sell" Grid.Row="2" Grid.Column="5"   Grid.ColumnSpan="2" Grid.RowSpan="2" />
+                    <Entry Placeholder="Price" Grid.Row="4" Grid.Column="3" BackgroundColor="White" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+                    <Entry Placeholder="Amount" Grid.Row="6" Grid.Column="3" BackgroundColor="White" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+                    <Button Style="{StaticResource buttonStyle}" Text="Order" Grid.Row="8" Grid.Column="3"  Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+
+                </Grid>
+
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <topbottom:BottomMenu />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>  
+
+</ContentPage>

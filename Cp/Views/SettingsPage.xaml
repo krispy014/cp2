@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:topbottom="clr-namespace:Cp.Menu;assembly=Cp"
+    x:Class="Cp.SettingsPage">
+
+    <ContentPage.Resources>
+         <ResourceDictionary>
+            <Color x:Key="betlog">#3ec3d5</Color>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+     <StackLayout x:Name="MasterStack" >
+       
+        <StackLayout x:Name="TopStack">
+                <topbottom:TopMenu />
+            </StackLayout>
+    
+    
+   
+        
+        <StackLayout x:Name="FirstStack">
+            <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Column="0" BackgroundColor="Red"/>
+            <Label Grid.Column="1" BackgroundColor="Blue"/>
+            <Label Grid.Column="2" BackgroundColor="Olive"/>
+            <Label Grid.Column="3" BackgroundColor="Teal"/>
+            <Label Grid.Column="4" BackgroundColor="Yellow"/>
+            <Label Grid.Column="5" BackgroundColor="Crimson"/>
+            <Label Margin="26, 16 , 16, 0"
+                     Grid.Row="1"
+                    
+                     Grid.ColumnSpan="6"
+                     Text="My Settings"
+                     FontSize="26"
+                     TextColor="#987500" />
+            </Grid>
+        </StackLayout>
+        
+        
+            
+            <StackLayout x:Name="SecondStack" Margin="26, 0 , 16, 0">
+          <Frame  
+                     BorderColor="Black"  >
+            
+            
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                       
+                 </Grid.RowDefinitions>
+
+                   
+                    
+
+                     <Label VerticalOptions="FillAndExpand"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     
+                     Margin="0, 26, 0,0"   
+                     Text="Image"
+                     FontSize="13"
+                     TextColor="#987500"  />
+                     
+                     
+                    <Label VerticalOptions="FillAndExpand"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="6"
+                     Margin="0, 26, 0,0"   
+                     Text="EMAIL:8282@paran.com"
+                     FontSize="13"
+                     TextColor="#987500" />
+                   
+                     </Grid>
+                     </Frame>
+                     </StackLayout>
+                   
+
+                  
+                    <StackLayout x:Name="Thirdstack" Margin="26, 0 , 16, 0">
+                    <Frame BorderColor="Black">
+                    <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                       
+                 </Grid.RowDefinitions>
+                    
+                    
+                    
+                    
+                    
+                    <Label Text="Image" TextColor="White" BackgroundColor="Black" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" />
+                    <Label
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="6"
+                     Margin="0, 0, 0,0"   
+                     Text="Set Display Name"
+                     FontSize="13"
+                     TextColor="#987500"  />
+
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="3"
+                        Margin="-4, -13, 0, 0"
+                        Placeholder="Display Name"
+                        PlaceholderColor="Black"
+                        FontSize="13"                        
+                        />
+                        
+                         <Button
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        Grid.ColumnSpan="3"
+                        Margin="-4, -13, 0, 0"
+                        BackgroundColor="Orange"
+                        TextColor="White"
+                        Text="Change Name"
+                        FontSize="13"                        
+                        />
+                        </Grid></Frame>
+                        </StackLayout>
+                        <StackLayout x:Name="Fourthstack" Margin="26, 0 , 16, 0">
+                    <Frame BorderColor="Black">
+                    <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                       
+                 </Grid.RowDefinitions>
+                    
+                    
+                    
+                    
+                    
+                    <Label Text="Image" TextColor="White" BackgroundColor="Black" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" />
+                    <Label
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="6"
+                     Margin="0, 0, 0,0"   
+                     Text="Two Factor Authentication"
+                     FontSize="13"
+                     TextColor="#987500"  />
+
+                    <Editor
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="6"
+                        Grid.RowSpan="2"
+                        Margin="-4, -13, 0, 0"
+                        Placeholder="Make Sure your date and time are correctly set, otherwise the 2FA code will not be valid, Check here for the current date and time"
+                        PlaceholderColor="Black"
+                        FontSize="13"                        
+                        />
+                        
+                         <Label
+                        Grid.Row="3"
+                        
+                        Grid.Column="1"
+                        Grid.ColumnSpan="6"
+                        Text="Two Factor Authentication is currently enabled on your account"
+                        FontSize="13"
+                        TextColor="#987500"      
+                        />
+                        <Button
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="3"
+                        BackgroundColor="Orange"
+                        Text="SEACTIVATE2FA"
+                        />
+                        
+                        </Grid></Frame>
+                        </StackLayout>
+                        
+                        <StackLayout x:Name="FifthStack"  Margin="26, 0 , 16, 0">
+                        <Frame  
+                     BorderColor="Black"  >
+            
+            
+                        <Grid>
+                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+
+                        </Grid.ColumnDefinitions>
+                    
+                        <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                       
+                        </Grid.RowDefinitions>
+
+                   
+                    
+
+                     <Label VerticalOptions="FillAndExpand"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     
+                     Margin="0, 26, 0,0"   
+                     Text="Image"
+                     FontSize="13"
+                     TextColor="#987500"  />
+                     
+                     
+                    <Label VerticalOptions="FillAndExpand"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="6"
+                     Margin="0, 26, 0,0"   
+                     Text="KYC (Know Your Customer)"
+                     FontSize="13"
+                     TextColor="#987500" />
+                     
+                     <Button BackgroundColor="Aqua"
+                     Grid.Row="0"
+                     Grid.Column="5"
+                     Grid.ColumnSpan="2"
+                     HeightRequest="20"
+                     Text="NEXT >"
+                     />
+                   
+                     </Grid>
+                     </Frame>
+                     </StackLayout>
+                     
+                      <StackLayout x:Name="Sixthstack" Margin="26, 0 , 16, 0">
+                    <Frame BorderColor="Black">
+                    <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                         <RowDefinition Height="auto"/>
+                       
+                 </Grid.RowDefinitions>
+                    
+                    
+                    
+                    
+                    
+                    <Label Text="Image" TextColor="White" BackgroundColor="Black" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" />
+                    <Label
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="6"
+                     Margin="0, 0, 0,0"   
+                     Text="Change Password"
+                     FontSize="13"
+                     TextColor="#987500"  />
+                        
+                        <Label Text="Current Password"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="4"
+                        FontSize="Micro"
+                        />
+                        
+                         <Entry
+                        Grid.Row="2"
+                        
+                        Grid.Column="1"
+                        Grid.ColumnSpan="6"
+                        
+                        FontSize="13"
+                        TextColor="#987500"      
+                        />
+                        <Label Text="New Password"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="4"
+                        FontSize="Micro"
+                        />
+                        
+                         <Entry
+                        Grid.Row="4"
+                        
+                        Grid.Column="1"
+                        Grid.ColumnSpan="6"
+                        
+                        FontSize="13"
+                        TextColor="#987500"      
+                        />
+                        <Label Text="Confirm New Password"
+                        Grid.Row="5"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="4"
+                        FontSize="Micro"
+                        />
+                        
+                         <Entry
+                        Grid.Row="6"
+                        
+                        Grid.Column="1"
+                        Grid.ColumnSpan="6"
+                        
+                        FontSize="13"
+                        TextColor="#987500"      
+                        />
+                       
+                        
+                        </Grid></Frame>
+                        </StackLayout>
+                     
+                   
+
+                   
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                         
+                        
+        <StackLayout VerticalOptions="EndAndExpand">
+            <topbottom:BottomMenu />
+        </StackLayout> 
+
+ </ScrollView>
+
+</StackLayout>
+</ContentPage.Content>  
+    
+    
+    
+</ContentPage>

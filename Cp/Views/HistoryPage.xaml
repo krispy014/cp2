@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:topbottom="clr-namespace:Cp.Menu;assembly=Cp" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Cp.Views.HistoryPage">
+   <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="betlog">#3ec3d5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+     <StackLayout x:Name="MasterStack" >
+        
+        <StackLayout x:Name="TopStack">
+          <topbottom:TopMenu />
+        </StackLayout>
+   <StackLayout x:Name="MiddleStack">
+        
+                    <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="30*" />
+                    <ColumnDefinition Width="30*" />
+                </Grid.ColumnDefinitions>
+                
+
+            </Grid>
+             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+              
+                <Label TextColor="#82000d" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" FontSize="Small" Text="Transaction History" HorizontalTextAlignment="Center"/>
+               
+
+            </Grid>
+            
+
+
+        <ListView x:Name="listhistory">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30*" />
+                                <ColumnDefinition Width="30*" />
+                                <ColumnDefinition Width="30*" />
+                               
+                            </Grid.ColumnDefinitions>
+
+                            <Label Style= "{StaticResource labelStyle}" Grid.Column="0"  Text="{Binding Date}"/>
+                            <Label Style="{StaticResource labelStyle}" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding TransactionInfo}"/>
+                           
+                            
+                        </Grid>
+
+
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        
+        </StackLayout>
+        
+    
+    
+    
+    
+    
+    
+        <StackLayout VerticalOptions="EndAndExpand">
+
+          <topbottom:BottomMenu />
+       
+       </StackLayout> 
+    
+    
+    
+    
+    
+    </StackLayout>
+    
+    
+   
+   
+  </ContentPage.Content>
+</ContentPage>

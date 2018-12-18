@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Cp"
+             xmlns:control="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:ci="clr-namespace:Xamarin.Forms.PageControl;assembly=Xamarin.Forms.PageControl" 
+             x:Class="Cp.StartPage"
+             >
+    <ContentPage.Content>
+        
+      <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <!--<control:CarouselView ItemsSource="{Binding Items}"
+                AbsoluteLayout.LayoutFlags="All" Position="{Binding Position, Mode=TwoWay}">
+                <control:CarouselView.ItemTemplate>
+                    <DataTemplate>
+
+                        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Image Source="{Binding Image}" Aspect="Fill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 1, 1, 1" />
+                            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 1, 1, 1" VerticalOptions="Center">
+                                <Label Text="{Binding Title}" HorizontalTextAlignment="Center" TextColor="White" HorizontalOptions="CenterAndExpand" />
+                                <Label Text="{Binding Detail}" HorizontalTextAlignment="Center" TextColor="White" HorizontalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </AbsoluteLayout>
+
+                    </DataTemplate>
+                </control:CarouselView.ItemTemplate>
+            </control:CarouselView>-->
+
+            <ci:PageControl ShowIndicator="true" IndicatorHeight="12" IndicatorWidth="12" UnselectedIndicator="uncircle.png"
+                                       SelectedIndicator="selectcircle.png" Position="{Binding Position}" ItemsSource="{Binding Items}" 
+                            
+           />
+            <Button Style="{StaticResource buttonStyle}" BackgroundColor="#15a8ec" TextColor="White" BorderRadius="0" Text="Log In" Clicked="Handle_Clicked"
+               />
+
+            <Button Style="{StaticResource buttonStyle}" BackgroundColor="White" TextColor="Black" BorderRadius="0" Text="Get Started"
+               />
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

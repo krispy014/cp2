@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Cp.Menu.BottomMenu"
+    BackgroundColor="White">
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*"/>
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="60"/>
+    </Grid.RowDefinitions>
+
+
+    <Button Grid.Row="1" Style="{StaticResource buttonStyle}" Grid.Column="0" Text="Trade" Command="{Binding TradePageCommand}"/>
+    <Button Grid.Row="1" Style="{StaticResource buttonStyle}" Grid.Column="1" Text="Balance" Command="{Binding BalancePageCommand}"/>
+    <Button Grid.Row="1" Style="{StaticResource buttonStyle}" Grid.Column="2" Text="Wallet" Command="{Binding WalletPageCommand}"/>
+    <Button Grid.Row="1" Style="{StaticResource buttonStyle}" Grid.Column="3" Text="Coin Info" Command="{Binding CoinInfoCommand}"/>
+    <Button Grid.Row="1" Style="{StaticResource buttonStyle}" Grid.Column="4" Text="My Page" Command="{Binding MyPageCommand}"/>
+
+
+
+</Grid>
+       

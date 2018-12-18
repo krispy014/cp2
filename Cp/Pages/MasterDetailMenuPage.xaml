@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Cp.MasterDetailMenuPage"
+            xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+            Title="MENU"
+            BackgroundColor="Teal"
+            NavigationPage.HasNavigationBar="False">
+    
+	<ContentPage.Content>
+		 
+    <StackLayout x:Name="MasterStack" >
+        
+        <StackLayout x:Name="TopStack">
+        <controls:CircleImage Source="http://www3.hilton.com/resources/media/hi/GSPSCHF/en_US/img/shared/full_page_image_gallery/main/HH_food_22_675x359_FitToBoxSmallDimension_Center.jpg"/>
+        <Label Text="Gerold" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        <Label Text="094545421456" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+        
+        <ScrollView>
+       <StackLayout x:Name="MidStack">
+       
+                <Grid>
+                <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                    
+            
+            
+            
+            <Image  Grid.Row="0" Grid.Column="0" Source="homepage.png"/>
+            <Label HeightRequest="30"  Margin="5" FontSize="Medium" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5" Text="Home" TextColor="White"  >
+            <Label.GestureRecognizers>
+             <TapGestureRecognizer Command="{Binding HomePageCommand}" />
+            </Label.GestureRecognizers>
+            </Label>
+                    
+                    
+            <Image Grid.Row="1" Grid.Column="0" Source="send.png"/>
+            <Label HeightRequest="30" Margin="5" FontSize="Medium" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Text="Send Money" TextColor="White" >
+            <Label.GestureRecognizers>
+             <TapGestureRecognizer Command="{Binding SendPageCommand}" />
+            </Label.GestureRecognizers>
+            </Label>
+                    
+            <Image Grid.Row="2" Grid.Column="0" Source="update.png"/>
+            <Label HeightRequest="30"  Margin="5" FontSize="Medium" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" Text="Receive Money" TextColor="White">
+            <Label.GestureRecognizers>
+             <TapGestureRecognizer Command="{Binding RecvPageCommand}" />
+            </Label.GestureRecognizers>
+            </Label>
+
+                    
+            <Image Grid.Row="3" Grid.Column="0" Source="trade.png"/>
+            <Label HeightRequest="30"  Margin="5" FontSize="Medium" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Text="Trade Coins" TextColor="White" >
+            <Label.GestureRecognizers>
+             <TapGestureRecognizer Command="{Binding TradePageCommand}" />
+            </Label.GestureRecognizers>
+            </Label>
+                    
+                    
+            <Image Grid.Row="4" Grid.Column="0" Source="wallet.png"/>
+            <Label HeightRequest="30"  Margin="5" FontSize="Medium" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5" Text="Wallet" TextColor="White" >
+            <Label.GestureRecognizers>
+             <TapGestureRecognizer Command="{Binding WalletPageCommand}" />
+            </Label.GestureRecognizers>
+            </Label>
+
+
+            <Image Grid.Row="5" Grid.Column="0" Source="update.png"/>
+            <Label HeightRequest="30"  Margin="5" FontSize="Medium" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5" Text="Update" TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding UpdatePageCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+
+                    
+            <Image Grid.Row="6" Grid.Column="0" Source="settings.png"/>
+            <Label HeightRequest="30"  Margin="5" FontSize="Medium" Grid.Row="6" Text="Setting" Grid.Column="1" Grid.ColumnSpan="5" TextColor="White"  >
+            <Label.GestureRecognizers>
+             <TapGestureRecognizer Command="{Binding SettingsPageCommand}" />
+            </Label.GestureRecognizers>
+            </Label>
+                
+                
+            </Grid>
+            </StackLayout>
+             </ScrollView>
+           
+        <StackLayout x:Name="BottomStack" VerticalOptions="EndAndExpand">
+        <Button  Text="Logout" BackgroundColor="Crimson" TextColor="White"/>
+        </StackLayout>
+       
+    
+    
+    </StackLayout>
+    
+        
+       
+                
+        
+	</ContentPage.Content>
+</ContentPage>

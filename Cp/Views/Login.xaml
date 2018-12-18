@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Cp.Login"
+             xmlns:viewModels="clr-namespace:Cp.Viewmodel;assembly=Cp"
+             xmlns:local="clr-namespace:Cp.Controls" BackgroundColor="White">
+<ContentPage.BindingContext>
+<viewModels:LoginViewModel/>
+</ContentPage.BindingContext>
+     
+    <ContentPage.Resources>
+         <ResourceDictionary>
+            <Color x:Key="primary">#3ec3d5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+	<ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="40" Spacing="10">
+                <Label  HorizontalOptions="CenterAndExpand" 
+                              Text="CP" 
+                              TextColor="#82000d" 
+                              FontSize="40" />
+
+                <Entry 
+                        x:Name="username"
+                        TextColor="Black" 
+                        PlaceholderColor="#82000d" 
+                        Text="{Binding Username}"
+                        Placeholder="Email" 
+                        HorizontalOptions="FillAndExpand"/>
+                <Entry 
+                        x:Name="password"
+                        TextColor="Black" 
+                        IsPassword="true"
+                        PlaceholderColor="#82000d"  
+                        Text="{Binding Password}"
+                        Placeholder="Password" 
+                        HorizontalOptions="FillAndExpand"/>
+
+                <Button HeightRequest="50"
+                        Command="{Binding LoginCommand}"
+                        Style="{StaticResource buttonStyle}"
+                        Text="Login"
+                        Clicked="Loginbtn"
+                        
+                        HorizontalOptions="FillAndExpand"/>
+
+                <Button HeightRequest="50"
+                        Command="{Binding LoginCommand}"
+                        Style="{StaticResource buttonStyle}"
+                        Text="SIGN UP"
+                        Clicked="Handle_Clicked"
+                        
+                        HorizontalOptions="FillAndExpand"/>
+
+                <Label  Text="Forgot password" 
+                        Style="{StaticResource labelStyle}"/>
+
+                <Label Margin="0,0,0,20" Text="I don't have an account" VerticalOptions="EndAndExpand"
+                        Style="{StaticResource labelStyle}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                                    Tapped="Handle_Clicked"
+                                    NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </ScrollView>
+	</ContentPage.Content>
+</ContentPage>

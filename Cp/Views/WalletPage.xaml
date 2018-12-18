@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Cp.WalletPage">
+      
+      
+<ContentPage.Resources>
+         <ResourceDictionary>
+            <Color x:Key="betlog">#3ec3d5</Color>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+     <ContentPage.Content>
+     <StackLayout x:Name="MasterStack" >
+        
+        <StackLayout x:Name="TopStack">
+         <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            
+
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="0" Text="Send"  Command="{Binding SendPageCommand}" />
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="1" Text="Receive" Command="{Binding ReceivePageCommand}" />
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="2" Text="History" Command="{Binding HistoryPageCommand}"/>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="3" Text="Store" Command="{Binding BuynsellPageCommand}"/>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="4" Text="Menu" />
+           
+           
+       
+       
+        </Grid>
+        </StackLayout>
+    
+    
+    
+    <StackLayout x:Name="MiddleStack">
+   
+    </StackLayout>
+    
+    <StackLayout VerticalOptions="EndAndExpand">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            
+
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="0" Text="Trade" Command="{Binding TradePageCommand}"/>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="1" Text="Balance" Command="{Binding BalancePageCommand}"/>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="2" Text="Wallet" Command="{Binding WalletPageCommand}"/>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="3" Text="Coin Info" Command="{Binding CoinInfoCommand}"/>
+            <Button Style="{StaticResource buttonStyle}" Grid.Row="1" Grid.Column="4" Text="My Page" Command="{Binding MyPageCommand}"/>
+            
+       
+       
+        </Grid>
+       </StackLayout> 
+</StackLayout>
+</ContentPage.Content>
+</ContentPage>
+
+

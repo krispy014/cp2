@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:l="clr-namespace:AiForms.Layouts;assembly=AiForms.Layouts"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:topbottom="clr-namespace:Cp.Menu;assembly=Cp"
+    x:Class="Cp.BuyandsellPage" >
+
+  <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="betlog">#3ec3d5</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+     <StackLayout x:Name="MasterStack" >
+        
+        <StackLayout x:Name="TopStack">
+                <topbottom:TopMenu />
+            </StackLayout>
+    
+  <StackLayout x:Name="MiddleStack">
+        <ScrollView HorizontalOptions="FillAndExpand">
+            <l:RepeatableWrapLayout x:Name="wlayout"
+                
+                ItemsSource="{Binding Items}"
+                Spacing="1" UniformColumns="2"
+                IsSquare="{Binding IsSquare}" >
+                <l:RepeatableWrapLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                        <Image Source="{Binding ImageUrl}" HeightRequest="350" Aspect="Fill"/>
+                            <Label
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                Text="Product Name" TextColor="#82000d"  />
+                                <Label
+                                VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                Text="Product Price" TextColor="#82000d"  />
+                        </StackLayout>
+                    </DataTemplate>
+                </l:RepeatableWrapLayout.ItemTemplate>
+            </l:RepeatableWrapLayout>
+        </ScrollView>
+    </StackLayout>
+    
+    <StackLayout VerticalOptions="EndAndExpand">
+                <topbottom:BottomMenu />
+            </StackLayout> 
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

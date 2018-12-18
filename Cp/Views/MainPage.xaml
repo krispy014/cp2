@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Cp.MainPage"
+		Title="Main Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding WelcomeText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+            <Label Text="DetailPage:"/>
+            <Button  Style="{StaticResource buttonStyle}" Text="Red Detail" Command="{Binding DetailButtonCommand}" CommandParameter="red"/>
+            <Button  Style="{StaticResource buttonStyle}" Text="Green Detail" Command="{Binding DetailButtonCommand}" CommandParameter="green"/>
+            <Button  Style="{StaticResource buttonStyle}" Text="Blue Detail" Command="{Binding DetailButtonCommand}" CommandParameter="blue"/>
+
+            <Label Text="DemoListViewPage:"/>
+            <Button  Style="{StaticResource buttonStyle}" Text="Demo List" Command="{Binding DemoListButtonCommand}"/>
+
+            <Label Text="MasterDetail:"/>
+            <Button  Style="{StaticResource buttonStyle}" Text="MasterDetail" Command="{Binding MasterDetailButtonCommand}"/>
+
+            <Label Text="NavigationView:"/>
+            <Button  Style="{StaticResource buttonStyle}" Text="NavigationView" Command="{Binding NavigationViewButtonCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
